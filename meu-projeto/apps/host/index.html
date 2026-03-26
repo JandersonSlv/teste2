@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Host Principal</title>
+</head>
+<body style="font-family: sans-serif; padding: 20px;">
+  <h1>Meu Site (Host)</h1>
+  <p>O botão abaixo vem de outro deploy:</p>
+
+  <!-- Espaço onde o botão vai entrar -->
+  <div id="button-container">Carregando...</div>
+
+  <!-- PASSO CRUCIAL: Carrega o script do outro projeto na Vercel -->
+  <script src="https://remote-product-app.vercel.app"></script>
+
+  <script>
+    // Chama a função que foi carregada pelo script acima
+    // Mesmo que o 'host' nunca tenha visto esse código, ele funciona!
+    window.renderRemoteButton('button-container');
+  </script>
+</body>
+</html>
