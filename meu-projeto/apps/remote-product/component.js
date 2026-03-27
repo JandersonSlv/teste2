@@ -1,6 +1,7 @@
-// Este código "exporta" o componente para o objeto global 'window'
+// remote-button.js (Hospedado na Vercel)
 window.renderRemoteButton = (containerId) => {
   const container = document.getElementById(containerId);
+  if (!container) return; // Proteção caso o container não exista
   
   const style = `
     <style>
